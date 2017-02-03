@@ -11,16 +11,12 @@ element = gets.chomp
 
 # проверка — есть ли в хэше элемент, который спросил пользователь
 if elements.has_key?(element)
-  user_element = elements.values_at(element)
-  user_element = user_element[0]
+  user_element = elements[element]
 
   puts "Порядковый номер: #{user_element["number"]}"
   puts "Название: #{user_element["title"]}"
   puts "Первооткрыватель: #{user_element['discoverer']} (#{user_element['year']})"
   puts "Плотность: #{user_element['density']}"
-
 else
   puts "Извините, про такой элемент мы еще не знаем."
 end
-
-
