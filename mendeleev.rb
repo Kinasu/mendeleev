@@ -4,8 +4,10 @@ file = File.read('mendeleev.json', encoding: 'utf-8')
 elements = JSON.parse(file)
 
 # выводим пользователю что у нас есть — вместе с количеством элементов
+puts
 puts "У нас всего элементов: #{elements.keys.size}"
-
+puts elements.keys
+puts
 puts "О каком элементе хотите узнать?"
 element = gets.chomp
 
